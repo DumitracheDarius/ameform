@@ -155,10 +155,6 @@ export default function Home() {
                 )}
             </div>
 
-            {/* WhatsApp Share */}
-            <div className="animate-fade-up delay-700 w-full max-w-md mt-3">
-                <WhatsAppShareButton />
-            </div>
 
 
 
@@ -408,9 +404,17 @@ function SuccessCard() {
       </p>
 
       <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-        <p className="tracking-wide" style={{ color: "rgba(255,255,255,0.25)", fontSize: "0.62rem" }}>
+        <p className="tracking-wide mb-4" style={{ color: "rgba(255,255,255,0.25)", fontSize: "0.62rem" }}>
           Câștigătorii vor fi contactați înainte de eveniment ✨
         </p>
+
+        <p className="font-black text-white mb-1" style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.85rem" }}>
+          ⚡ Line-up-ul merită împărțit.
+        </p>
+        <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>
+          Trimite unui prieten care ar veni cu tine.
+        </p>
+        <WhatsAppShareButton />
       </div>
     </div>
   );
