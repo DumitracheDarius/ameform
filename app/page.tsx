@@ -396,10 +396,10 @@ function SuccessCard() {
         Ești înscris!
       </h2>
       <p className="text-sm mb-1.5" style={{ color: "rgba(255,255,255,0.5)" }}>
-        Te-ai înregistrat cu succes în tombola AME.
+        Te-ai înregistrat cu succes.
       </p>
       <p className="text-xs font-black tracking-wide uppercase" style={{ color: "#a855f7" }}>
-        13 Iunie · Romaero · Backstage Experience
+        13 Iunie · Romaero
       </p>
 
       <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
