@@ -47,7 +47,7 @@ export default function Home() {
       {/* Hero Background */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/13June.jpg"
+          src="/outro_frame0.png"
           alt="Concert 13 Iunie Romaero"
           fill
           className="object-cover object-center"
@@ -110,7 +110,7 @@ export default function Home() {
                 textShadow: "0 4px 40px rgba(0,0,0,0.99)",
               }}
             >
-              BACKSTAGE
+              INIVITATII
             </h1>
             <h1
               className="font-black leading-[0.88] tracking-[-0.03em] uppercase"
@@ -124,29 +124,41 @@ export default function Home() {
                 backgroundClip: "text",
               }}
             >
-              EXPERIENCE
+              GRATUITE
             </h1>
           </div>
 
-          {/* Sub */}
-          <p
-            className="animate-fade-up delay-300 text-center font-semibold tracking-[0.18em] uppercase mt-3 mb-7"
-            style={{ fontSize: "clamp(0.6rem, 2.2vw, 0.8rem)", color: "rgba(255,255,255,0.55)" }}
-          >
-            Winners will enjoy exclusive access
-          </p>
+            {/* Event chips */}
+            <div className="animate-fade-up delay-400 flex items-center gap-3 mb-8 flex-wrap justify-center">
+                <Chip icon="📅" text="13 Iunie 2026" />
+                <Dot />
+                <Chip icon="📍" text="Romaero, București" />
+                <Dot />
+                <Chip icon="🎟️" text="Acces Gratuit" />
+            </div>
 
-          {/* Event chips */}
-          <div className="animate-fade-up delay-400 flex items-center gap-3 mb-8 flex-wrap justify-center">
-            <Chip icon="📅" text="13 Iunie 2026" />
-            <Dot />
-            <Chip icon="📍" text="Romaero, București" />
-            <Dot />
-            <Chip icon="🎟️" text="Acces Gratuit" />
-          </div>
+
+            {/* Form / Success */}
+            <div className="animate-fade-up delay-600 w-full max-w-md">
+                {status === "success" ? (
+                    <SuccessCard />
+                ) : (
+                    <FormCard
+                        email={email}
+                        phone={phone}
+                        status={status}
+                        errorMsg={errorMsg}
+                        onEmailChange={setEmail}
+                        onPhoneChange={setPhone}
+                        onSubmit={handleSubmit}
+                    />
+                )}
+            </div>
+
+
 
           {/* Lineup */}
-          <div className="animate-fade-up delay-500 w-full max-w-lg mb-8">
+          <div className="animate-fade-up delay-500 w-full max-w-lg mb-8 mt-10">
             <div className="flex items-center gap-3 mb-4">
               <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, transparent, rgba(147,51,234,0.5))" }} />
               <span className="text-[0.6rem] font-black tracking-[0.35em] uppercase" style={{ color: "#a855f7" }}>Line-up</span>
@@ -159,22 +171,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Form / Success */}
-          <div className="animate-fade-up delay-600 w-full max-w-md">
-            {status === "success" ? (
-              <SuccessCard />
-            ) : (
-              <FormCard
-                email={email}
-                phone={phone}
-                status={status}
-                errorMsg={errorMsg}
-                onEmailChange={setEmail}
-                onPhoneChange={setPhone}
-                onSubmit={handleSubmit}
-              />
-            )}
-          </div>
+
 
           <p
             className="animate-fade-up delay-700 mt-7 text-center max-w-sm tracking-wide"
@@ -184,12 +181,12 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Footer */}
-        <footer className="relative z-10 text-center pb-6 pt-2">
-          <p className="font-semibold tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.15)", fontSize: "0.6rem" }}>
-            AME · Mecanica Membrana · 2026
-          </p>
-        </footer>
+        {/*/!* Footer *!/*/}
+        {/*<footer className="relative z-10 text-center pb-6 pt-2">*/}
+        {/*  <p className="font-semibold tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.15)", fontSize: "0.6rem" }}>*/}
+        {/*    AME · Mecanica Membrana · 2026*/}
+        {/*  </p>*/}
+        {/*</footer>*/}
       </div>
     </main>
   );
