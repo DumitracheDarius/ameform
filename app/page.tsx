@@ -110,7 +110,7 @@ export default function Home() {
                 textShadow: "0 4px 40px rgba(0,0,0,0.99)",
               }}
             >
-              INIVITATII
+              INVITAȚII
             </h1>
             <h1
               className="font-black leading-[0.88] tracking-[-0.03em] uppercase"
@@ -122,6 +122,7 @@ export default function Home() {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
+                marginTop: "1.25rem",
               }}
             >
               GRATUITE
