@@ -36,8 +36,15 @@ export async function POST(req: NextRequest) {
 
   if (error) {
     if (error.code === "23505") {
+      const detail = error.details ?? "";
+      if (detail.includes("phone")) {
+        return NextResponse.json(
+          { error: "Acest număr de telefon este deja înscris în tombolă." },
+          { status: 409 }
+        );
+      }
       return NextResponse.json(
-        { error: "Ești deja înscris în tombolă!" },
+        { error: "Acest email este deja înscris în tombolă." },
         { status: 409 }
       );
     }
